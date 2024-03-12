@@ -1,0 +1,20 @@
+# --- Defaults ---
+
+#setting for datasets
+#"""
+#The data are stored in datapath; trainingdata is a text file to specify the set of data using for training
+#"""
+data_origin_path: /data/wyt/map_datas/xian/0/out/      # the absolute path for the original data
+data_output_path: /data/lgy/stPrefiction/codes/FG_SCN/src/datasets/xian/output
+
+edge_attribute_name: 'fill_edge.csv'
+adjacence_matrix_name: 'connection.csv'
+traffic_sequence_name: 'result_speeds.csv'
+marginal_file_name: "edge_edge.csv"
+number_of_sensors: 207
+
+seq_length_x: 4
+seq_length_y: 4
+
+model_save_dir: /data/lgy/stPrefiction/codes/FG_SCN/logs/DSTGCN/saved_models/xian
+tensorboard_dir: /data/lgy/stPrefiction/codes/FG_SCN/logs/DSTGCN/xian

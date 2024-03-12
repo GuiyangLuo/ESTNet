@@ -1,0 +1,61 @@
+# --- Defaults ---
+
+generate_dataset: False
+dataset_name: metr-la # pems-bay  #metr-la
+#------------------
+fusion: 'concat' #  static dynamic, concat
+random_seed: 3998
+
+
+device: 'cuda:0'    # Only Gpu version is supported.
+batch_size: 64
+epochs: 300
+learning_rate: 0.0008
+
+lr_decay: True
+lr_decay_rate: 0.5
+lr_decay_step: 100, 150, 190, 235, 270, 300
+
+in_dims: 1
+num_nodes: 64
+nhid: 24
+dropour_rate: 0
+weight_decay: 0
+print_every: 100
+exp_id: 1
+use_tensorboard: True
+
+##
+
+
+#----------------- parameters for multi-scale static network
+static_gcn_feature_size: [10,10,10]
+number_of_scales: 3
+
+
+
+#----------------- parameters for GRU dynamic network
+dynamic_gru_feature_size: 10
+gru_number_of_layers: 3
+gru_bidirectional: False
+
+
+#----------------- parameters for 3D graph embedding convolution networks
+top_k_neighbors: 16
+number_layers_for_spatial_temporal: 3
+spatial_temporal_hidden: [64,64,64,64,64]
+max_allow_spatial_conv: 3
+max_allow_dilation: 2
+pooling_neighbors_list:  [2, 2, 2]  #[3,2,2,2]
+pooling_seq_list: [2, 2, 2]  # [3,2,2,1]
+
+#----------------- parameters for residual Networks
+resnet_layers: [1, 2, 3, 4]
+channels_conv_start_layer: 32
+channels_conv_extractor_out: 156
+
+
+###
+Version_id: v_EA
+cur_model: 'model_EA'
+

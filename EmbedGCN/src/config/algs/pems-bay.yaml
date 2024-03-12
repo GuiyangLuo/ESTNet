@@ -1,0 +1,22 @@
+# --- Defaults ---
+
+#setting for datasets
+#"""
+#The data are stored in datapath; trainingdata is a text file to specify the set of data using for training
+#"""
+data_origin_path: /data/wyt/map_datas/bay/0/out/      # the absolute path for the original data
+data_output_path: /data/lgy/stPrefiction/codes/EmbedGCN/src/datasets/pems-bay
+
+connections_road_network: 'connection.csv'
+edge_att_road_network: 'fill_edge.csv'
+sensor_in_traffic_network: 'sensor.csv'
+traffic_sequence_name: 'pems-bay.h5'
+
+number_of_sensors: 325
+
+
+seq_length_x: 12
+seq_length_y: 12
+
+model_save_dir: /data/lgy/stPrefiction/codes/NeuIPS/logs/{}/pems-bay
+tensorboard_dir: /data/lgy/stPrefiction/codes/NeuIPS/logs/{}/pems-bay
